@@ -66,7 +66,7 @@ h6 {
     display: flex;
     flex-direction: column;
     gap: 5em;
-    padding: var(--tab-padding);
+    padding: var(--site-padding);
     width: 100%;
 }
 
@@ -75,7 +75,7 @@ h6 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--tab-padding);
+    padding: var(--site-padding);
     background: rgba(0, 0, 0, 0.3);
     position: fixed;
     top: 0;
@@ -490,7 +490,7 @@ h6 {
     border-left: 2px solid black;
     /* background: #fff; */
     animation: typing 1.5s steps(19) infinite;
-    -webkit-animation: typing 1.5s steps(18) infinite;
+    -webkit-animation: typing 1.5s steps(19) infinite;
 }
 
 /* THE THE DYNAMIC TEXT | THE LI | SPAN ANIMATION KEY FRAMES */
@@ -600,6 +600,7 @@ h6 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .theborder:active>.animatedborder {
@@ -685,12 +686,6 @@ h6 {
     }
 }
 
-/* MY IMAGE */
-.myimage {
-    width: 100%;
-    height: 100%;
-}
-
 /* THE SVG PARENT */
 .thesvgparent {
     position: relative;
@@ -717,92 +712,129 @@ h6 {
     fill: var(--primary-bg-color);
 }
 
+/* THE MEDIA QUERIES */
+@media (max-width:350px) {
 
-@media (max-width:225px) {
+    /* THE BORDER */
+    /* .theborder {
+        visibility: hidden;
+    } */
 
-    /* THE SITE TITLE */
-    .site_title {
-        display: none;
+    /* THE STATIC TEXT */
+    .static-txt {
+        font-size: 60%;
+    }
+
+    /* THE DYNAMIC TEXT | THE LI*/
+    li.dynamic-li.dli {
+        font-size: 90%;
+    }
+
+    /* THE PARAGRAPH */
+    div.justme.para {
+        font-size: 60%;
+        width: 100%;
+    }
+    
+    /* THE BORDER */
+    div.animatedborder.anb {
+        width: 10px;
+        height: 35px;
+    }
+    
+    /* THE ANIMATED SPAN */
+    span.animatedspan {
+        width: 5px;
+        height: 5px;
+    }
+    
+}
+
+@media (max-width:500px) {
+
+    /* THE PARAGRAPH */
+    div.justme {
+        font-size: 70%;
     }
 }
 
-@media (max-width:319px) {
-
-    /*  THE MENU/SLIDE BAR | MY SLIDE | REAL SLIDE | NAVIGATIONS| ACTIVE && STATIC LINK*/
-    a.slide_navigations,
-    a.slide_active_navigations {
-        font-size: 100%;
-    }
-
-    /* THE SLIDE HANDLES | SLIDE TITLE*/
-    h1.slidetitle {
-        font-size: 100%;
-    }
-
-    /* THE SLIDE HANDLES | SLIDE SOCIAL ICON THE ICON ITSELF*/
-    span.icon {
-        font-size: 100%;
-    }
-
-    /*  THE MENU/SLIDE BAR | MY SLIDE | REAL SLIDE | NAVIGATIONS*/
-    ul.slide_links::before {
-        height: 40vh;
-    }
-
-
-}
-
-@media (max-width:424px) {
-
-    /*  THE MENU/SLIDE BAR | MY SLIDE | REAL SLIDE */
-    div.realslide {
-        top: 8.2%;
-    }
-}
-
-@media(max-width:700px) {
-
-    /*  THE MENU/SLIDE BAR | MY SLIDE | REAL SLIDE */
-    div.realslide {
-        align-items: stretch;
-        padding-top: 16%;
-    }
-
-    /*  THE MENU/SLIDE BAR | MY SLIDE | REAL SLIDE | NAVIGATIONS BEF0RE EFFECT*/
-    .slide_links::before {
-        height: 30vh;
-    }
-
-    /*  THE MENU/SLIDE BAR | MY SLIDE | REAL SLIDE | NAVIGATIONS| ACTIVE && STATIC LINK*/
-    .slide_navigations,
-    .slide_active_navigations {
-        font-size: 25px;
-    }
-
-    /* THE SLIDE HANDLES | SLIDE TITLE*/
-    .slidetitle {
-        font-size: 20px;
-    }
-
-    /* THE SLIDE HANDLES | SLIDE SOCIAL ICON THE ICON ITSELF*/
-    .icon {
-        font-size: 20px;
-    }
+@media (max-width: 600px) {
 
     /* THE INTRODUCTION WRAPPER */
-.the_introduction {
-    display: flex;
-    align-items: center;
-    padding-top: 15%;
-    gap: 1em;
-}
+    .the_introduction {
+        padding-top: 20%;
+    }
+
+    /* THE DYNAMIC TEXT | THE LI*/
+    li.dynamic-li {
+        font-size: 100%;
+    }
+
+    /* THE BORDER */
+    div.animatedborder {
+        top: 1%;
+        width: 15px;
+        height: 40px;
+    }
+
+    /* THE ANIMATED SPAN */
+    .animatedspan {
+        width: 10px;
+        height: 10px;
+        left: 2px;
+        top: 23px;
+    }
+
+    /* THE ANIMATED SPAN KEYFRAME*/
+    @keyframes bounce {
+        0% {
+            top: 4px;
+        }
+
+        100% {
+            top: 23px;
+        }
+    }
+
+    /* THE ANIMATED | THE LI | SPAN BROSWER SUPPORT ANIMATION KEY FRAMES */
+    @-o-keyframes bounce {
+        0% {
+            top: 0;
+        }
+
+        100% {
+            top: 23px;
+        }
+    }
+
+    @-moz-keyframes bounce {
+        0% {
+            top: 0;
+        }
+
+        100% {
+            top: 23px;
+        }
+    }
+
+    @-webkit-keyframes bounce {
+        0% {
+            top: 0;
+        }
+
+        100% {
+            top: 23px;
+        }
+    }
 
 }
 
-@media (max-width:1056px) {
+
+@media (max-width:1000px) {
 
     /* THE HEADER */
-    .the_header {
+    .the_header,
+    .wrapper {
         padding: var(--tab-padding);
     }
 
@@ -814,32 +846,129 @@ h6 {
 
     /*  THE MENU/SLIDE BAR | MY SLIDE | REAL SLIDE */
     .realslide {
-        top: 9.9%;
+        top: 8%;
     }
 
     /* THE INTRODUCTION WRAPPER | FIRST WRAPPER*/
     .the_introduction_fw {
         gap: 0em;
+        width: 50%;
     }
 
-        /* THE DYNAMIC TEXT | THE LI*/
-        li.dynamic-li {
-            font-size: 30px;
-         
-        }
+    /* THE DYNAMIC TEXT | THE LI*/
+    .dynamic-li {
+        font-size: 30px;
+    }
 
-            /* THE PARAGRAPH */
+    /* THE PARAGRAPH */
     .justme {
         font-size: 80%;
         width: 100%;
     }
-}
 
+    /* MY IMAGE */
+    .image {
+        width: 50%;
+    }
 
-@media (max-width:1191px) {
+    /* MY IMAGE */
+    .myimage {
+        width: 100%;
+        height: 100%;
+    }
 
-    /* THE DYNAMIC TEXT | THE LI*/
-    .dynamic-li {
-        font-size: 50px;
+    /* THE THE DYNAMIC TEXT | THE LI | SPAN ANIMATION KEY FRAMES */
+    @keyframes typing {
+        0% {
+            background: white;
+        }
+
+        70% {
+            background: white;
+        }
+
+        90% {
+            width: 15%;
+            background: white;
+        }
+
+        100% {
+            background: transparent;
+            left: 100%;
+            width: 5%;
+            margin: 0 -35px 0 35px;
+        }
+    }
+
+    /* THE THE DYNAMIC TEXT | THE LI | SPAN BROSWER SUPPORT ANIMATION KEY FRAMES */
+    @-o-keyframes typing {
+        0% {
+            background: white;
+        }
+
+        70% {
+            background: white;
+        }
+
+        90% {
+            width: 15%;
+            background: white;
+        }
+
+        100% {
+            background: transparent;
+            left: 100%;
+            width: 5%;
+            margin: 0 -35px 0 35px;
+        }
+    }
+
+    @-moz-keyframes typing {
+        0% {
+            background: white;
+        }
+
+        70% {
+            background: white;
+        }
+
+        90% {
+            width: 15%;
+            background: white;
+        }
+
+        100% {
+            background: transparent;
+            left: 100%;
+            width: 5%;
+            margin: 0 -35px 0 35px;
+        }
+    }
+
+    @-webkit-keyframes typing {
+        0% {
+            background: white;
+        }
+
+        70% {
+            background: white;
+        }
+
+        90% {
+            width: 15%;
+            background: white;
+        }
+
+        100% {
+            background: transparent;
+            left: 100%;
+            width: 5%;
+            margin: 0 -35px 0 35px;
+        }
+    }
+
+    /* THE ANIMATED BORDER */
+    .animatedborder {
+        top: 80px;
     }
 }
