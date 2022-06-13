@@ -37,7 +37,7 @@ body {
     --senior-bg-color: #2bda85;
     --site-padding: 0px 10%;
     --primary-bg-color: #eefcf9;
-    --tertiary-color: #599531;
+    --tertiary-color: #27AE61;
     --site-box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
     --responsive-padding: 15px;
     --tab-padding: 1% 5%;
@@ -953,97 +953,178 @@ h6 {
     margin: 40px 0px;
 }
 
-/* THE THIRD WRAPPER */
-.thirdwrapper {
-    margin-top: 50px;
+
+/* THE PROJECTS */
+.projectas {
+    /* margin-top: 60px; */
     padding: var(--site-padding);
 }
 
-/* THE HEADER IN THE THIRDWRAPPER */
+/* THE PROJECT TITLE */
 .pro {
-    padding-bottom: 40px;
-}
-
-/* MY PROJECTS */
-.myprojects {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 1em;
+    padding-bottom: 30px;
 }
 
 /* THE PROJECT CHILD */
-.projectchild {
-    background-color: rgba(0, 0, 0, 0.09);
-    padding: 1%;
-    position: relative;
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
 }
 
-/* THE PROJECT CHILD | PC */
-.pc {
+/* THE PROJECT CHILD | THE IMAGE SLIDE */
+.imageslide {
+    display: flex;
+    gap: 0.5em;
+}
+
+/* THE PROJECT CHILD | THE IMAGE SLIDE | ISLIDE*/
+.islide {
+    display: flex;
+    flex-direction: column;
+    border-radius: 23px;
+    background: #fff;
+    box-shadow: var(--site-box-shadow);
+    border-right: 1px solid var(--senior-bg-color);
+    padding: 14px 25px;
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    -ms-border-radius: 23px;
+    -o-border-radius: 23px;
+}
+
+/* THE PROJECT CHILD | THE IMAGE SLIDE | ISLIDE HOVER EFFECT*/
+.islide:hover {
+    /* box-shadow: var(--site-box-shadow); */
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+/* THE PROJECT CHILD | THE IMAGE SLIDE | ISLIDE | ISLIDE CHILD*/
+.isc {
+    display: flex;
+    gap: .5em;
+}
+
+/* THE PROJECT TITLE */
+.pt {
+    margin-top: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 20px;
+    color: var(--senior-bg-color);
+}
+
+/* THE WAVE BETWEEN THE THIRD WRAPPER AND THE FOURTH WRAPPER  */
+.custom-shape-divider-top-1655133939 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1655133939 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 124px;
+}
+
+.custom-shape-divider-top-1655133939 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/* THIS IS THE ENDING OF THE WAVE STYLING */
+
+
+/* THE FOURTH WRAPPER */
+.fourthwrapper {
+    padding: var(--site-padding);
+    padding-top: 150px;
+    display: flex;
+    /* display: none; */
+    flex-direction: column;
+    background-color: var(--primary-bg-color);
+}
+
+/* THE FOURTH WRAPPER | THE TESTIMONIALS*/
+.testimonials {
     display: flex;
     gap: 1em;
 }
 
-/* THE MODAL WRAPPER */
-.modalwrapper {
-    position: relative;
-}
-
-/* THE MODAL WRAPPER LINK*/
-.modalwrapper a {
-    display: inline-block;
-    text-decoration: none;
-    padding: 15px;
-    background-color: #fff;
-    border-radius: 3px;
-    text-transform: uppercase;
-    color: #585858;
-    font-family: 'Roboto', sans-serif;
-}
-
-/* THE MODAL CONTENT*/
-.modal {
-    visibility: hidden;
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    bottom: 0;
-    left: 0;
+/* THE FOURTH WRAPPER | THE TESTIMONIALS | MY CLIENTS */
+.myclients {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background: rgba(77, 77, 77, .7);
-    transition: all .4s;
+    gap: 1em;
+    flex: 1;
 }
 
-/* THE MODAL CONTENT | TARGET EFFECT*/
-.modal:target {
-    visibility: visible;
-    opacity: 1;
+/* THE LAST MY CLIENTS WRAPPER */
+.lmyc {
+    margin: 3% 50%;
+    width: 90%;
+    display: none;
 }
 
-/* THE HEADER IN THE PROJECT CHILD */
-.theheaders {
-    position: relative;
-    width: 100%;
+/* THE FOURTH WRAPPER | THE TESTIMONIALS | MY CLIENTS | THE IMAGE BORDER RADIUS*/
+.imgborderradius {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    width: 150px;
+    height: 150px;
 }
 
-/* THE HEADER IN THE PROJECT CHILD | THE TEXT ITSELF*/
-.inds {
- visibility: hidden;
- text-align: center;
- padding: 6%;
- width: 100%;
- background: rgba(0, 0, 0,0.2);
- color: #fff;
+/* THE FOURTH WRAPPER | THE TESTIMONIALS | MY CLIENTS | THE CLIENT WORD | THE CLIENT HEADERS AND STARS*/
+.chandstars {
+    display: flex;
+    gap: 1em;
+    align-items: center;
 }
 
- 
-/* THE PROJECT CHILD | THE TEXT HOVER*/
-.projectchild:hover .inds {
-    visibility: visible;
+/* THE CLIENT HEADER | THE NAME*/
+.name {
+    font-size: 20px;
+}
+
+/* THE CLIENT HEADER | THE CLIENT  COMPANY LINK*/
+.cp {
+    display: flex;
+    color: var(--senior-bg-color);
+    text-decoration: underline;
+    font-style: italic;
+}
+
+/* THE CLIENT HEADER | THE CLIENT  COMPANY LINK HOVER EFFECT*/
+.cp:hover {
+    color: var(--tertiary-color);
+}
+
+/* THE FIVE STARS */
+.fivestars {
+    color: orange;
+}
+
+.clientpara {
+    font-size: 100%;
+}
+
+/* FOOTER'S WAVE */
+.custom-shape-divider-bottom-1651923262 .shape-fill {
+    fill: var(--primary-bg-color);
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-top-1655133939 svg {
+        width: calc(150% + 1.3px);
+        height: 89px;
+    }
 }
 
 
@@ -1083,7 +1164,48 @@ h6 {
         font-size: 100%;
     }
 
+    /* THE FOURTH WRAPPER | THE TESTIMONIALS | MY CLIENTS | THE IMAGE BORDER RADIUS*/
+    img.imgborderradius {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        width: 60px;
+        height: 60px;
+    }
+
+    /* THE CLIENT PARAGRAPH && THE FIVE STARS && THE NAME OF THE CLIENT AND THE CLIENT LINK  */
+    .cp.smaller,
+    div.fivestars,
+    p.clientpara {
+        font-size: 70%;
+    }
+
 }
+
+
+
+@media (max-width:499px) {
+
+    /* THE IMAGE AND CHILD */
+    .imagenchild {
+        flex-direction: column;
+    }
+
+    /* THE LIL XPERIENCE */
+    .lilx {
+        background: white;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        position: static;
+        border-radius: 0%;
+        width: 100%;
+    }
+
+    .imageslide {
+        overflow: scroll;
+    }
+
+}
+
 
 @media (max-width:500px) {
 
@@ -1115,23 +1237,22 @@ h6 {
         font-size: 15px;
     }
 
-}
-
-@media (max-width:499px) {
-
-    /* THE IMAGE AND CHILD */
-    .imagenchild {
+    .imageslide {
         flex-direction: column;
+        gap: 1em;
     }
 
-    /* THE LIL XPERIENCE */
-    .lilx {
-        background: white;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        position: static;
-        border-radius: 0%;
-        width: 100%;
+    /* THE FOURTH WRAPPER | THE TESTIMONIALS | MY CLIENTS | THE IMAGE BORDER RADIUS*/
+    .imgborderradius {
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        width: 90px;
+        height: 90px;
     }
+
+
+
 }
 
 @media (max-width: 600px) {
@@ -1151,6 +1272,16 @@ h6 {
         width: 100%;
         height: 100%;
     }
+
+    /* THE CLIENT PARAGRAPH && THE FIVE STARS && THE NAME OF THE CLIENT AND THE CLIENT LINK  */
+    .clientpara,
+    .fivestars,
+    .cp,
+    .name {
+        font-family: SourceLight;
+        font-size: 80%;
+    }
+
 }
 
 @media (max-width:1000px) {
@@ -1158,7 +1289,9 @@ h6 {
     /* THE HEADER */
     .the_header,
     .wrapper,
-    .secondwrapper {
+    .secondwrapper,
+    .thirdwrapper,
+    .fourthwrapper {
         padding: var(--tab-padding);
     }
 
@@ -1308,4 +1441,39 @@ h6 {
         width: 100%;
     }
 
+    /* PROJECT TITTLE */
+    .pt {
+        font-size: 100%;
+    }
+
+    /* THE FOURTH WRAPPER */
+    /* THE FOURTH WRAPPER */
+    .fourthwrapper {
+        padding-top: 20%;
+    }
+
+
+
+    .testimonials {
+        flex-direction: column;
+    }
 }
+
+@media (max-width: 1330px) {
+
+    /* THE PROJECT CHILD | THE IMAGE SLIDE | ISLIDE | THE IMAGE INSIDE THE ISC WRAPPER && THE IMAGE BORDER RADIUS*/
+    .ab {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* I HAVE THE FOOTER AND ALL THOSE SPACE BETWEEN EVERYTHING TO WORK ON RIGHT NOW I WANT TO READ */
