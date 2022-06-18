@@ -1119,6 +1119,165 @@ h6 {
     fill: var(--primary-bg-color);
 }
 
+/* THE LAST WRAPPER */
+.lastwrapper {
+    background: var(--senior-bg-color);
+    padding: var(--site-padding);
+    margin-top: -10.4%;
+    padding-top: 10%;
+    padding-bottom: 60px;
+}
+
+/* THE LAST ABOUT ME HEADER */
+.lastAbout {
+    color: white;
+}
+
+/* THE CONTACT BOX AND FORM WRAPPER */
+.contactForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* THE FORM FLEX */
+.formflex {
+    display: flex;
+    gap: 1em;
+}
+
+/* THE INPUT BOX */
+.inputBox {
+    position: relative;
+    width: 250px;
+}
+
+/* THE INPUT BOX | INPUT */
+.inputBox input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: var(--senior-bg-color);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    outline: none;
+    color: white;
+    font-size: 100%;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+/* THE INPUT BOX | SPAN*/
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 15px;
+    color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    font-size: 100%;
+    text-transform: uppercase;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+/* THE INPUT BOX | SPAN VALID AND FOCUS EFFECT */
+.inputBox input:valid~span,
+.inputBox input:focus~span {
+    color: #fff;
+    transform: translateX(15px) translateY(-6px);
+    -webkit-transform: translateX(15px) translateY(-6px);
+    -moz-transform: translateX(15px) translateY(-6px);
+    -ms-transform: translateX(15px) translateY(-6px);
+    -o-transform: translateX(15px) translateY(-6px);
+    font-size: 0.65em;
+    padding: 0 15px;
+    background: var(--senior-bg-color);
+    border-left: 1px solid #fff;
+    border-right: 1px solid#fff;
+    letter-spacing: 0.2em;
+}
+
+/* THE INPUT BOX | SPAN VALID AND FOCUS EFFECT ON THE SECOND CHILD*/
+.inputBox:nth-child(2) input:valid~span,
+.inputBox:nth-child(2) input:focus~span {
+    background: #fff;
+    padding: 0px 15px;
+    color: black;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+/* THE INPUT BOX | INPUT VALID AND FOCUS EFFECT */
+.inputBox input:valid,
+.inputBox input:focus {
+    border: 1px solid #fff;
+}
+
+
+/* THE LAST BUTTON | THE LAST BUTTON ITSELF*/
+.lastbtn {
+    background: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/* THE LAST BUTTON | THE LAST BUTTON ITSELF | THE LSAT READMORE TEXT*/
+.lastreadmore {
+    color: var(--senior-bg-color);
+}
+
+/* THE CONTACT BOX */
+.contact_box {
+    padding: 35px 25px;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 50%;
+}
+
+/* THE BOX CHILD */
+.bchild {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+}
+
+/* THE ICON ON THE CONTACT BOX */
+.lasti {
+    background: #2bda854d;
+    height: 40px;
+    color: var(--senior-bg-color);
+    width: 40px;
+    font-size: 80%;
+    padding: 15px 12px;
+    border-radius: 50%;
+}
+
+.last {
+    padding: 15px;
+}
+
+
 /** For mobile devices **/
 @media (max-width: 767px) {
     .custom-shape-divider-top-1655133939 svg {
@@ -1131,6 +1290,21 @@ h6 {
 
 /* THE MEDIA QUERIES */
 @media (max-width:350px) {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    .aboutme,
+    .head,
+    .icony,
+    .readmore,
+    .plusup,
+    h6,
+    p {
+        font-size: 80%;
+    }
 
     /* THE STATIC TEXT */
     .static-txt {
@@ -1251,8 +1425,6 @@ h6 {
         height: 90px;
     }
 
-
-
 }
 
 @media (max-width: 600px) {
@@ -1282,6 +1454,28 @@ h6 {
         font-size: 80%;
     }
 
+/* MY SERVICES  */
+.myservices{
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+    /* THE CONTACT BOX AND FORM WRAPPER */
+    .contactForm {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    /* THE CONTACT BOX */
+    .contact_box {
+        width: 100%;
+    }
+
+    section.lastwrapper {
+        margin-top: -11.5%;
+    }
+
+
 }
 
 @media (max-width:1000px) {
@@ -1291,7 +1485,8 @@ h6 {
     .wrapper,
     .secondwrapper,
     .thirdwrapper,
-    .fourthwrapper {
+    .fourthwrapper,
+    .lastwrapper {
         padding: var(--tab-padding);
     }
 
@@ -1426,7 +1621,7 @@ h6 {
 
     /* THE BORDER */
     .theborder {
-        visibility: hidden;
+        display: none;
     }
 
     /* THE SECOND WRAPPER CHILD*/
@@ -1447,15 +1642,18 @@ h6 {
     }
 
     /* THE FOURTH WRAPPER */
-    /* THE FOURTH WRAPPER */
     .fourthwrapper {
         padding-top: 20%;
     }
 
-
-
     .testimonials {
         flex-direction: column;
+    }
+
+    /* THE LAST WRAPPER */
+    .lastwrapper {
+        padding-top: 10%;
+        padding-bottom: 60px;
     }
 }
 
