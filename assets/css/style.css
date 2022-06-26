@@ -55,7 +55,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+ul {
     padding: 0;
     margin: 0;
 }
@@ -76,6 +77,8 @@ h6 {
     justify-content: space-between;
     align-items: center;
     padding: var(--site-padding);
+    padding-bottom: 1%;
+    padding-top: 1%;
     background: rgba(0, 0, 0, 0.3);
     position: fixed;
     top: 0;
@@ -237,12 +240,6 @@ h6 {
     color: white;
 }
 
-/*  THE MENU/SLIDE BAR | MY SLIDE */
-/* .myslide {
-
-    z-index: 2;
-
-} */
 
 /*  THE MENU/SLIDE BAR | MY SLIDE | THE SLIDE */
 #theslide {
@@ -265,7 +262,7 @@ h6 {
     background: rgba(0, 0, 0, 0.3);
     position: fixed;
     right: 0px;
-    top: 9.4%;
+    top: 10%;
     width: 100%;
     height: 100vh;
 }
@@ -500,18 +497,19 @@ h6 {
     }
 
     70% {
+        width: 55%;
         background: white;
     }
 
     90% {
-        width: 50%;
+        width: 20%;
         background: white;
     }
 
     100% {
-        background: transparent;
+        /* background: rgba(255, 255, 255, 0.5); */
         left: 100%;
-        width: 55%;
+        width: 10%;
         margin: 0 -35px 0 35px;
     }
 }
@@ -807,7 +805,8 @@ h6 {
 /* THE LIL XPERIENCE | THE PARAGRAPH */
 .para {
     font-size: 80%;
-    font-variant: small-caps;
+    color: #000;
+    /* font-variant: small-ca ps; */
 }
 
 /* FLEX BETWEEN BUTTON AND ABOUT ME */
@@ -1145,6 +1144,7 @@ h6 {
 .formflex {
     display: flex;
     gap: 1em;
+    flex-wrap: wrap;
 }
 
 /* THE INPUT BOX */
@@ -1276,7 +1276,66 @@ h6 {
 .last {
     padding: 15px;
 }
+ 
 
+/*+==+ THE ABOUT ME PAGE */
+.aboutmepagesecondwrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 7em;
+}
+
+/* ABOUT ME SECOND WRAPPER | CHAMPION */
+.champion {
+    display: flex;
+    gap: 3em;
+}
+
+/* ABOUT ME SECOND WRAPPER | CHAMPION | CHAMPION HEADER*/
+.championheader {
+    font-size: 30px;
+    text-transform: capitalize;
+    font-family: SourceBold;
+}
+
+/* ABOUT ME SECOND WRAPPER | CHAMPION | CHAMPION HEADER AFTER EFFECT*/
+.championheader::after {
+    content: '';
+    display: block;
+    border-bottom: 3px solid #000;
+    width: 50px;
+
+}
+
+/* THE CHAMPIONSHIP */
+.championship {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* THE CHAMPION HEADER SUBLING  */
+.championheadersibling {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    border-bottom: 1px solid #000;
+}
+
+/* THE CHAMPION HEADER SIBLING HEADER */
+.chhsh {
+    font-size: 20px;
+    font-family: SourceBold;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.ch2 {
+    /* font-family: SourceLight; */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+ 
 
 /** For mobile devices **/
 @media (max-width: 767px) {
@@ -1425,6 +1484,22 @@ h6 {
         height: 90px;
     }
 
+    /* THE  MESSAGE BOX */
+    .messageBox01 {
+        flex-direction: row;
+        align-items: end;
+    }
+
+    /* THE  MESSAGE BOX */
+    .messageBox {
+        flex-direction: column;
+    }
+
+    /* THE MESSAGE ARENA */
+    div.messageArea {
+        align-items: stretch;
+    }
+
 }
 
 @media (max-width: 600px) {
@@ -1454,11 +1529,11 @@ h6 {
         font-size: 80%;
     }
 
-/* MY SERVICES  */
-.myservices{
-    margin-top: 0px;
-    padding-top: 0px;
-}
+    /* MY SERVICES  */
+    .myservices {
+        margin-top: 0px;
+        padding-top: 0px;
+    }
 
     /* THE CONTACT BOX AND FORM WRAPPER */
     .contactForm {
@@ -1476,6 +1551,9 @@ h6 {
     }
 
 
+    .champion{
+        flex-direction: column;
+    }
 }
 
 @media (max-width:1000px) {
@@ -1655,6 +1733,7 @@ h6 {
         padding-top: 10%;
         padding-bottom: 60px;
     }
+
 }
 
 @media (max-width: 1330px) {
@@ -1666,12 +1745,4 @@ h6 {
     }
 }
 
-
-
-
-
-
-
-
-
-/* I HAVE THE FOOTER AND ALL THOSE SPACE BETWEEN EVERYTHING TO WORK ON RIGHT NOW I WANT TO READ */
+ 
