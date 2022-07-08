@@ -902,13 +902,14 @@ ul {
     gap: 1em;
     flex: 1;
     background: white;
+    text-align: center;
 }
 
 /* GENERAL NAME FOR THE BOXES THE HOVER EFFECT */
 .box:hover {
     background-color: var(--senior-bg-color);
-    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
 }
 
 /* THE BOX THE BUTTON HOVER EFFECT */
@@ -1276,9 +1277,16 @@ ul {
 .last {
     padding: 15px;
 }
- 
+
 
 /*+==+ THE ABOUT ME PAGE */
+/* THE QUOTE */
+.quote {
+    font-weight: 90%;
+    font-style: italic;
+    /* color: white; */
+}
+
 .aboutmepagesecondwrapper {
     display: flex;
     flex-direction: column;
@@ -1334,7 +1342,41 @@ ul {
     /* font-family: SourceLight; */
     text-transform: uppercase;
     letter-spacing: 3px;
+    margin: 0;
+    padding: 0;
 }
+
+
+/* ====THE SERVICES SECTION==== */
+.service {
+    font-size: 40px;
+}
+
+/* THE BOXES */
+.theBoxes {
+    text-align: center;
+}
+
+.sw {
+    gap: 3em;
+}
+
+
+.swrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+/* THE SERVICE BOXES */
+.theServiceBoxes {
+    display: flex;
+    position: relative;
+    gap: 3em;
+    align-items: center;
+}
+
+.serviceBoxHeader{font-size: 20px;font-variant: small-caps;}
  
 
 /** For mobile devices **/
@@ -1371,7 +1413,8 @@ ul {
     }
 
     /* THE DYNAMIC TEXT | THE LI*/
-    li.dynamic-li.dli {
+    li.dynamic-li.dli,
+    .chhsh {
         font-size: 90%;
     }
 
@@ -1437,6 +1480,11 @@ ul {
         overflow: scroll;
     }
 
+
+    .none {
+        display: none;
+    }
+
 }
 
 
@@ -1500,6 +1548,19 @@ ul {
         align-items: stretch;
     }
 
+    .ch2 {
+        font-size: 90%;
+        letter-spacing: 1;
+    }
+
+    .champion {
+        gap: 1em;
+    }
+
+    .aboutmepagesecondwrapper {
+        gap: 4em;
+    }
+
 }
 
 @media (max-width: 600px) {
@@ -1510,7 +1571,8 @@ ul {
     }
 
     /* THE DYNAMIC TEXT | THE LI*/
-    li.dynamic-li {
+    li.dynamic-li,
+    h2.championheader {
         font-size: 100%;
     }
 
@@ -1551,8 +1613,16 @@ ul {
     }
 
 
-    .champion{
+    .champion {
         flex-direction: column;
+    }
+}
+
+@media (max-width:812px) {
+
+    /* THE CHAMPION HEADER SUBLING  */
+    .championheadersibling {
+        width: 100%;
     }
 }
 
@@ -1586,7 +1656,8 @@ ul {
     }
 
     /* THE DYNAMIC TEXT | THE LI*/
-    .dynamic-li {
+    .dynamic-li,
+    .championheader {
         font-size: 30px;
     }
 
@@ -1745,4 +1816,9 @@ ul {
     }
 }
 
- 
+
+@media (min-width:123px) {
+    body {
+        /* display: none; */
+    }
+}
